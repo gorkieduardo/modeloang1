@@ -1,0 +1,23 @@
+
+<div class="container">
+
+
+
+<div class="card-columns">
+
+    <div class="card animated fadeIn fast" *ngFor= "let concepto of conceptos; let i= index" style="width: 18rem;">
+        <img class= "card-img-top img-fluid" [src]="concepto.img" [alt]="concepto.img">
+        <div class="card-body">
+          <h5 class="card-title">{{concepto.nombre}}</h5>
+          <p class="card-text">{{concepto.bio}}</p>
+          <p class="card-text">{{concepto.aparicion}}</p>
+         
+        <button (click)="verConcepto(i)"
+        type="button " class= "btn btn-info ">
+        Leer más
+      </button>
+        </div>
+      </div>
+
+</div>
+</div>

@@ -1,0 +1,32 @@
+
+<div class="container">
+<h1 class="animated fadeIn">{{ concepto.nombre | uppercase }} <small>({{ concepto.aparicion | date:'y' }})</small></h1>
+<hr>
+
+<div class="row">
+
+  <div class="col-md-4">
+
+    <img [src]="concepto.img" class="img-fluid" [alt]="concepto.nombre">
+    
+  </div>
+ 
+
+  <div class="col-md-8">
+    <h3>{{ concepto.nombre }}</h3>
+    <hr>
+    <p>
+      {{ concepto.bio }}
+    </p>
+    
+    <div>
+      <img *ngIf="concepto.casa == 'Marvel'" class="img-logo" src="assets/img/marvel-logo.png" alt="DC">
+      <img *ngIf="concepto.casa == 'DC'" class="img-logo" src="assets/img/dc-logo.jpg" alt="Marvel">
+    </div>
+    
+
+  </div>
+  <button (click)="regresarContenidos()"
+  type="button" class="btn btn-primary">Primary</button>
+</div>
+</div>
